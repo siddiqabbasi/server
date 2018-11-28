@@ -1,0 +1,33 @@
+{
+    "name": "crossplatform-push-server",
+    "version": "1.0.0",
+    "description": "Crossplatform push example server application",
+    "main": "index.js",
+    "scripts": {
+        "start": "DEBUG=push:* node index.js",
+        "test": "jest"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "author": "Alexander Friedl",
+    "license": "MIT",
+    "dependencies": {
+        "debug": "^3.1.0",
+        "koa": "^2.5.1",
+        "koa-bodyparser": "^4.2.0",
+        "koa-router": "^7.4.0",
+        "mongoose": "^5.1.1",
+        "node-pushnotifications": "^1.0.21"
+    },
+    "devDependencies": {
+        "jest": "^22.4.2"
+    },
+    "bugs": {
+        "url": "https://github.com/alex-friedl/crossplatform-push-notifications-example/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:alex-friedl/crossplatform-push-notifications-example.git"
+    }
+}
