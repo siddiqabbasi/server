@@ -42,7 +42,9 @@ router.post('/token', async (ctx) => {
 router.get('/push', async (ctx) => {
   console.log('Request to send push notifications to all device tokens');
   const tokens = await db.fetchDeviceTokens();
+  console.log(tokens, 'tokenssssssss')
   const results = await push.sendNotification(tokens);
+  console.log(results, 'resultsssssssssssss')
   ctx.body = results;
 });
 

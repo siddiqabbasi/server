@@ -12,10 +12,12 @@ const settings = {
     },
   },
 };
+console.log(settings, 'settingsssssss')
 
 const PushNotifications = require('node-pushnotifications');
 
 const push = new PushNotifications(settings);
+console.log(push, 'pushhhhhhhhhh')
 
 module.exports = {
   sendNotification: async (tokens) => {
@@ -26,10 +28,10 @@ module.exports = {
 
     try {
       const results = await push.send(tokens, data);
-      debug('Results for sending notifications:', results);
+      console.log('Results for sending notifications:', results);
       return results;
     } catch (err) {
-      debug('Error while sending notifications:', err);
+      console.log('Error while sending notifications:', err);
       throw err;
     }
   },
